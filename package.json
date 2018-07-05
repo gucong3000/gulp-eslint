@@ -1,5 +1,12 @@
 {
 	"name": "gulp-eslint",
+	"nyc": {
+		"reporter": [
+			"lcov",
+			"text-summary"
+		],
+		"cache": true
+	},
 	"version": "5.0.0",
 	"description": "A gulp plugin for processing files with ESLint",
 	"repository": "adametry/gulp-eslint",
@@ -16,7 +23,7 @@
 		"test": "mocha",
 		"gulp": "gulp",
 		"gulp-example": "gulp --gulpfile=example/config.js",
-		"coverage": "istanbul cover _mocha"
+		"coverage": "nyc mocha"
 	},
 	"keywords": [
 		"gulpplugin",
@@ -49,8 +56,8 @@
 		"babel-eslint": "^8.2.5",
 		"from2-string": "^1.1.0",
 		"gulp": "^4.0.0",
-		"istanbul": "^0.4.5",
 		"mocha": "^5.2.0",
+		"nyc": "^12.0.2",
 		"should": "^13.2.1",
 		"vinyl": "^2.2.0"
 	}
